@@ -20,6 +20,7 @@ const getCommentsForEachPost = async (posts) => {
   ))
 
   console.log(res);
+
   const postComments = await Promise.all(res.map(r => r.json()));
   
   postComments.forEach((comments, i) => posts[i].comments = comments);
