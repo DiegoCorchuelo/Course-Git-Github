@@ -20,7 +20,7 @@ const getCommentsForEachPost = async (posts) => {
   ))
 
   console.log(res);
-  
+
   const postComments = await Promise.all(res.map(r => r.json()));
   
   postComments.forEach((comments, i) => posts[i].comments = comments);
@@ -59,3 +59,7 @@ getBlogContent();
 const loadAdds = () => {
   console.log('Adds loaded');
 }
+
+// Change 1 Backend
+// Change 2 Backend
+// Change 3 Backend
